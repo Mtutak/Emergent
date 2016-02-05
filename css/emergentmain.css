@@ -1,0 +1,550 @@
+/* Setting Up border box and clearfix */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* setting initial body settings */ 
+body {
+	font-family: 'Montserrat','Ubuntu', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.icon img{
+	width:100px;
+}
+
+a:hover {
+	margin-top: 10px;
+}
+
+html {
+	font-size: 2.5em;
+}
+body {
+	background-color: #fff;
+	padding: 25px;
+	text-align: center;
+}
+
+/* Navigation Content */
+
+.navtop {
+  width: 800px;
+  position: relative;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom:10px;
+}
+
+
+li {
+  list-style: none;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  display: inline;
+  float: left;
+}
+
+nav a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 25px;
+  transition: 0.3s all;
+}
+
+nav a:hover {
+  background: red;
+  color:white;
+}
+
+.navbar-brand {
+  float: left;
+  color: #fff;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+} 
+
+/*--------------------Video Section---------------------------------*/
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; 
+	padding-top: 5px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+
+.videoOverlay.header {
+
+	position:absolute;
+	left:0px;
+	top:0px;
+	color:white;
+	z-index: 50;
+	background-color:rgba(254, 202, 20, .90);
+	width:100%;
+	height:100%;
+	padding:50px;
+	-webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+     opacity: 1;
+     font-size: 3em;
+
+} 
+
+.videoOverlay p{
+	font-style: italic;
+}
+
+.videoOverlay.header:hover {
+	opacity:0;
+	visibility: hidden;
+
+}
+
+/*.videoOverlay.header {
+	position: absolute;
+  width:100%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+										
+
+
+
+/* ----------------Header and Main Content --------------------------*/
+
+.main {
+	background: url("../assets/trackBG.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:top center;
+	background-attachment: fixed;
+	overflow: hidden;
+	text-align: center;
+	color:white;
+	/*padding-left: 100px; */
+	position:relative;
+	padding-bottom:50px;
+
+} 
+
+
+.shorts{
+	height:429px;
+	width:302px;
+	background-image:url("../assets/shorts.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	position:absolute;
+	top:60%;
+	left:700px;
+
+}
+
+.id{
+	width:150px;
+	height:150px;
+	background-image:url("../assets/id.png");
+	background-repeat: no-repeat;
+	position:absolute;
+	top:-20px;
+	left:600px;
+
+}
+
+.keys{
+	width:70px;
+	height:100%;
+	background-image:url("../assets/keys.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+	position:absolute;
+	top:-70px;
+	right:102px;
+}
+
+.phone{
+	width:200px;
+	height:100%;
+	background-image:url("../assets/phone.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	position:absolute;
+	top:-80px;
+	left:725px;
+}
+
+	/*----Font Size -------------*/
+.intro-lead-in {
+	font-size: 2em;
+	font-style:bold;
+	padding-top:20px;
+}
+
+.introheading{
+	font-size: 1.25em;
+}
+.main h2 {
+	font-size: 1em;
+}
+
+
+form h3{
+	font-size: 1em;
+}
+
+form p{
+	font-size: .75em;
+}
+
+.valueProp {
+	width:40%;
+	padding-left: 100px;
+}
+
+
+/* -----------------------------Floating Form within Main------------ */
+
+form{
+	float: left; 
+	margin-top:10px;
+	font-size: 1.25em;
+	background-color: orange;
+	border-width: 4px; 
+    border-color: #CCCCCC; 
+    border-radius: 10px; 
+    padding: 20px;
+    -webkit-box-shadow: 6px 10px 12px 1px rgba(0,0,0,0.33);
+	-moz-box-shadow: 6px 10px 12px 1px rgba(0,0,0,0.33);
+	box-shadow: 6px 10px 12px 1px rgba(0,0,0,0.33); 
+}
+
+
+form label{ 
+    font-size: 1em; 
+    display: block; 
+} 
+
+form input, form textarea, form select{ 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: #666666; 
+    border-radius: 2px; 
+    padding: 4px; 
+    width: 100%; 
+} 
+
+form input{
+	background-color: white;
+}
+
+form h1{ 
+    margin-bottom: 10px; 
+    border-bottom-color: #CCCCCC; 
+    border-bottom-width: 0px; 
+    border-radius: 2px; 
+    background-color: #FFA200; 
+} 
+
+input #submit{
+	color: white;
+}
+
+/* ------------- Button at bottom of Main Content ------------*/
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:18px;
+	font-weight:bold;
+	padding:7px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+	position: absolute;
+	bottom:0px;
+}
+.myButton:hover {
+	position:absolute;
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.myButton:active {
+	position:absolute;
+	bottom:3px;
+}
+/*-----------------Product Icons Section------------------*/
+.productIcons {
+	margin:0px auto 10px auto;
+	background-color: white;
+	padding-top: 25px;
+	
+}
+
+.icons{
+	margin:0px auto 0px auto;
+}
+
+.icon {
+	display:inline-block;
+}
+
+.icon h4{
+	padding-left: 5px; 
+	padding-right:5px;
+}
+
+.icon a{
+	display:inline-block;
+}
+/*--------------------Product Section-----------------------*/
+
+#products .container {
+	background-color: white;
+	width:100%;
+}
+
+.productIcons h3{
+	font-size: 1.25em;
+	display:inline-block;
+	width:60%;
+	margin:0px auto 0px auto;
+
+}
+
+.productIcons h4{
+	font-size: 1em;
+}
+
+.icon h4{
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+/* Pop Up on Scroll */
+.pop-up{
+	margin:0 auto 0 auto;
+	opacity:0;
+	transform: trasnlateX(-20px);
+	transition: all 0.3s ease-in-out;
+
+}
+
+.pop-up.show{
+	opacity:1;
+	transform: translateX(0px);
+}
+
+.pop-up form{
+	width:100%;
+	font-size: .85em;
+	background-color: rgba(244, 189, 26, 0.53); 
+    border-radius: 10px; 
+    padding: 2px 0px 2px 0px;
+    margin-top: 0px;
+    box-shadow: 1px 6px 12px 1px rgba(0,0,0,0.33);
+}
+
+
+.pop-up form label p{ 
+    font-size: 1em; 
+    display: inline; 
+} 
+
+.pop-up form input, form textarea, form select{ 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: #666666; 
+    border-radius: 2px; 
+    padding: 4px; 
+    width: 100%; 
+} 
+
+.pop-up form input{
+	background-color: white;
+	width:20%;
+}
+
+
+.pop-up input.submit{
+	color: black;
+	max-width: 80px;
+}
+
+.pop-up h3{
+	display:inline-block;
+	font-size: 1.3em;
+}
+
+.social img{
+	padding: 4px 4px 4px 0px;
+}
+
+/*--------------------Product Details and Specs-----------------------*/
+
+.columns {
+    width: 60%;
+    margin: 0px auto 0px auto;}
+
+.section-heading {
+	font-size: 2em;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+
+
+.features {
+	width:100%;
+	height: auto;
+	
+}
+
+.feature{
+	display:inline-block;
+	width:320px;
+	padding-bottom: 10px;
+}
+
+.feature img{
+	width:320px;
+	height:254px;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+
+hr {
+	width:80%;
+	height:8px;
+	border-radius: 2px;
+}
+	/* Image Rotation and/or Full Page Description of Each Element */
+
+
+
+
+
+
+/*--------------------About the Company and Team-----------------------------*/
+#mission {
+	background-color: orange;
+	text-align: center;
+}
+.social-buttons{
+	display:inline-block;
+
+}
+
+/*----Kinda Responsive--------------*/
+
+@media screen and (max-width: 960px) {
+	html{
+		font-size: 12px
+	}
+	nav a{
+		display:block;
+		font-size: .75em;
+	}
+
+	.videoOverlay h3 {
+		font-size: .75em;
+		max-height: 250px;
+		overflow:hidden;
+	}
+
+	.videoOverlay p{
+		visibility:hidden;
+	}
+
+
+	.valueProp, .intro-lead-in {
+		width:90%;
+	}
+
+	.introlheading {
+		width:80%;
+	}
+
+	.phone {
+		visibility: hidden;
+	}
+
+	form {
+		z-index: 100;
+		margin-right: 10px;
+	}
+
+	.myButton {
+		visibility: hidden;
+	}
+
+}
+
+
+
